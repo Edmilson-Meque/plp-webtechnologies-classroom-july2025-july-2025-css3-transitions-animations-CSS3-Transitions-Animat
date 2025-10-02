@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Part 1: Animated Button */
+.animated-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.animated-btn:hover {
+    background-color: #2ecc71;
+    transform: scale(1.2);
+}
+
+/* Part 3: Box Animation */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    margin: 20px 0;
+}
+
+/* Keyframe for animation */
+@keyframes moveAndRotate {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(150px) rotate(180deg); }
+    100% { transform: translateX(0) rotate(360deg); }
+}
+
+/* Triggered class */
+.animate {
+    animation: moveAndRotate 2s ease-in-out forwards;
+}
